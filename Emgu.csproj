@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EmguCV.3.0.0\build\EmguCV.props" Condition="Exists('..\packages\EmguCV.3.0.0\build\EmguCV.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C80FD32B-1253-4378-B126-C276F40C6F6A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emgu</RootNamespace>
+    <AssemblyName>Emgu</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Jorn\Desktop\test publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2338420DA230E67293A1798ADF6FB8401D6A5ECE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Emgu_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.0.2\lib\net45\Accord.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.MachineLearning, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.MachineLearning.3.0.2\lib\net45\Accord.MachineLearning.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.0.2\lib\net45\Accord.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.0.2.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Statistics.3.0.2\lib\net45\Accord.Statistics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.Contrib, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.Cuda, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.Cuda.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.ML, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.ML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.OCR, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.OCR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.Shape, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.Shape.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.Stitching, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.Stitching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.Superres, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.Superres.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.UI.GL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.CV.VideoStab, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.CV.VideoStab.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=3.0.0.2157, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.0.0\lib\net451\Emgu.Util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fastenshtein, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fastenshtein.1.0.0.2\lib\net40-client\Fastenshtein.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="tessdata\afr.traineddata" />
+    <None Include="tessdata\amh.traineddata" />
+    <None Include="tessdata\ara.cube.bigrams" />
+    <None Include="tessdata\ara.cube.fold" />
+    <None Include="tessdata\ara.cube.lm" />
+    <None Include="tessdata\ara.cube.nn" />
+    <None Include="tessdata\ara.cube.params" />
+    <None Include="tessdata\ara.cube.size" />
+    <None Include="tessdata\ara.cube.word-freq" />
+    <None Include="tessdata\ara.traineddata" />
+    <None Include="tessdata\asm.traineddata" />
+    <None Include="tessdata\aze.traineddata" />
+    <None Include="tessdata\aze_cyrl.traineddata" />
+    <None Include="tessdata\bel.traineddata" />
+    <None Include="tessdata\ben.traineddata" />
+    <None Include="tessdata\bod.traineddata" />
+    <None Include="tessdata\bos.traineddata" />
+    <None Include="tessdata\bul.traineddata" />
+    <None Include="tessdata\cat.traineddata" />
+    <None Include="tessdata\ceb.traineddata" />
+    <None Include="tessdata\ces.traineddata" />
+    <None Include="tessdata\chi_sim.traineddata" />
+    <None Include="tessdata\chi_tra.traineddata" />
+    <None Include="tessdata\chr.traineddata" />
+    <None Include="tessdata\COPYING" />
+    <None Include="tessdata\cym.traineddata" />
+    <None Include="tessdata\dan.traineddata" />
+    <None Include="tessdata\dan_frak.traineddata" />
+    <None Include="tessdata\deu.traineddata" />
+    <None Include="tessdata\deu_frak.traineddata" />
+    <None Include="tessdata\dzo.traineddata" />
+    <None Include="tessdata\ell.traineddata" />
+    <None Include="tessdata\eng.cube.bigrams">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.cube.fold">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.cube.lm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.cube.nn">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.cube.params">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.cube.size">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.cube.word-freq">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.tesseract_cube.nn">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\eng.user-words">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\enm.traineddata" />
+    <None Include="tessdata\epo.traineddata" />
+    <None Include="tessdata\equ.traineddata" />
+    <None Include="tessdata\est.traineddata" />
+    <None Include="tessdata\eus.traineddata" />
+    <None Include="tessdata\fas.traineddata" />
+    <None Include="tessdata\fin.traineddata" />
+    <None Include="tessdata\fra.cube.bigrams" />
+    <None Include="tessdata\fra.cube.fold" />
+    <None Include="tessdata\fra.cube.lm" />
+    <None Include="tessdata\fra.cube.nn" />
+    <None Include="tessdata\fra.cube.params" />
+    <None Include="tessdata\fra.cube.size" />
+    <None Include="tessdata\fra.cube.word-freq" />
+    <None Include="tessdata\fra.tesseract_cube.nn" />
+    <None Include="tessdata\fra.traineddata" />
+    <None Include="tessdata\frk.traineddata" />
+    <None Include="tessdata\frm.traineddata" />
+    <None Include="tessdata\gle.traineddata" />
+    <None Include="tessdata\glg.traineddata" />
+    <None Include="tessdata\grc.traineddata" />
+    <None Include="tessdata\guj.traineddata" />
+    <None Include="tessdata\hat.traineddata" />
+    <None Include="tessdata\heb.traineddata" />
+    <None Include="tessdata\hin.cube.bigrams" />
+    <None Include="tessdata\hin.cube.fold" />
+    <None Include="tessdata\hin.cube.lm" />
+    <None Include="tessdata\hin.cube.nn" />
+    <None Include="tessdata\hin.cube.params" />
+    <None Include="tessdata\hin.cube.word-freq" />
+    <None Include="tessdata\hin.tesseract_cube.nn" />
+    <None Include="tessdata\hin.traineddata" />
+    <None Include="tessdata\hrv.traineddata" />
+    <None Include="tessdata\hun.traineddata" />
+    <None Include="tessdata\iku.traineddata" />
+    <None Include="tessdata\ind.traineddata" />
+    <None Include="tessdata\isl.traineddata" />
+    <None Include="tessdata\ita.cube.bigrams" />
+    <None Include="tessdata\ita.cube.fold" />
+    <None Include="tessdata\ita.cube.lm" />
+    <None Include="tessdata\ita.cube.nn" />
+    <None Include="tessdata\ita.cube.params" />
+    <None Include="tessdata\ita.cube.size" />
+    <None Include="tessdata\ita.cube.word-freq" />
+    <None Include="tessdata\ita.tesseract_cube.nn" />
+    <None Include="tessdata\ita.traineddata" />
+    <None Include="tessdata\ita_old.traineddata" />
+    <None Include="tessdata\jav.traineddata" />
+    <None Include="tessdata\jpn.traineddata" />
+    <None Include="tessdata\kan.traineddata" />
+    <None Include="tessdata\kat.traineddata" />
+    <None Include="tessdata\kat_old.traineddata" />
+    <None Include="tessdata\kaz.traineddata" />
+    <None Include="tessdata\khm.traineddata" />
+    <None Include="tessdata\kir.traineddata" />
+    <None Include="tessdata\kor.traineddata" />
+    <None Include="tessdata\kur.traineddata" />
+    <None Include="tessdata\lao.traineddata" />
+    <None Include="tessdata\lat.traineddata" />
+    <None Include="tessdata\lav.traineddata" />
+    <None Include="tessdata\lit.traineddata" />
+    <None Include="tessdata\mal.traineddata" />
+    <None Include="tessdata\mar.traineddata" />
+    <None Include="tessdata\mkd.traineddata" />
+    <None Include="tessdata\mlt.traineddata" />
+    <None Include="tessdata\msa.traineddata" />
+    <None Include="tessdata\mya.traineddata" />
+    <None Include="tessdata\nep.traineddata" />
+    <None Include="tessdata\nld.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="tessdata\nor.traineddata" />
+    <None Include="tessdata\ori.traineddata" />
+    <None Include="tessdata\osd.traineddata" />
+    <None Include="tessdata\pan.traineddata" />
+    <None Include="tessdata\pol.traineddata" />
+    <None Include="tessdata\por.traineddata" />
+    <None Include="tessdata\pus.traineddata" />
+    <None Include="tessdata\ron.traineddata" />
+    <None Include="tessdata\rus.cube.fold" />
+    <None Include="tessdata\rus.cube.lm" />
+    <None Include="tessdata\rus.cube.nn" />
+    <None Include="tessdata\rus.cube.params" />
+    <None Include="tessdata\rus.cube.size" />
+    <None Include="tessdata\rus.cube.word-freq" />
+    <None Include="tessdata\rus.traineddata" />
+    <None Include="tessdata\san.traineddata" />
+    <None Include="tessdata\sin.traineddata" />
+    <None Include="tessdata\slk.traineddata" />
+    <None Include="tessdata\slk_frak.traineddata" />
+    <None Include="tessdata\slv.traineddata" />
+    <None Include="tessdata\spa.cube.bigrams" />
+    <None Include="tessdata\spa.cube.fold" />
+    <None Include="tessdata\spa.cube.lm" />
+    <None Include="tessdata\spa.cube.nn" />
+    <None Include="tessdata\spa.cube.params" />
+    <None Include="tessdata\spa.cube.size" />
+    <None Include="tessdata\spa.cube.word-freq" />
+    <None Include="tessdata\spa.traineddata" />
+    <None Include="tessdata\spa_old.traineddata" />
+    <None Include="tessdata\sqi.traineddata" />
+    <None Include="tessdata\srp.traineddata" />
+    <None Include="tessdata\srp_latn.traineddata" />
+    <None Include="tessdata\swa.traineddata" />
+    <None Include="tessdata\swe.traineddata" />
+    <None Include="tessdata\syr.traineddata" />
+    <None Include="tessdata\tam.traineddata" />
+    <None Include="tessdata\tel.traineddata" />
+    <None Include="tessdata\tgk.traineddata" />
+    <None Include="tessdata\tgl.traineddata" />
+    <None Include="tessdata\tha.traineddata" />
+    <None Include="tessdata\tir.traineddata" />
+    <None Include="tessdata\tur.traineddata" />
+    <None Include="tessdata\uig.traineddata" />
+    <None Include="tessdata\ukr.traineddata" />
+    <None Include="tessdata\urd.traineddata" />
+    <None Include="tessdata\uzb.traineddata" />
+    <None Include="tessdata\uzb_cyrl.traineddata" />
+    <None Include="tessdata\vie.traineddata" />
+    <None Include="tessdata\yid.traineddata" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cvextern.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="numbers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ffmpeg300.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="table dirty.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="table.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="test.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="word.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EmguCV.3.0.0\build\EmguCV.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmguCV.3.0.0\build\EmguCV.props'))" />
+    <Error Condition="!Exists('..\packages\EmguCV.3.0.0\build\EmguCV.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmguCV.3.0.0\build\EmguCV.targets'))" />
+    <Error Condition="!Exists('..\packages\Accord.3.0.2\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.0.2\build\Accord.targets'))" />
+  </Target>
+  <Import Project="..\packages\EmguCV.3.0.0\build\EmguCV.targets" Condition="Exists('..\packages\EmguCV.3.0.0\build\EmguCV.targets')" />
+  <Import Project="..\packages\Accord.3.0.2\build\Accord.targets" Condition="Exists('..\packages\Accord.3.0.2\build\Accord.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
